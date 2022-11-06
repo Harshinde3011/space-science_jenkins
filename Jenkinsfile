@@ -6,8 +6,7 @@ pipeline {
         stage('docker build') {
             steps {
                  sh '''
-                    docker stop httpd
-                    docker rm httpd
+           
                     docker build -t siddharth9442/project1:$BUILD_NUMBER .
                        
                        '''
