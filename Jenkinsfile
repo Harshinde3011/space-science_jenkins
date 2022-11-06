@@ -18,7 +18,7 @@ pipeline {
                     sh '''    
                           
                           docker push siddharth9442/project1:$BUILD_NUMBER  
-                          docker run -itd -p 80:80 --name httpd yogi9949/project1:11
+                          docker run -itd -p 80:80 --name httpd siddharth9442/project1:$BUILD_ID
                           docker rmi siddharth9442/project1:$BUILD_NUMBER'''
                }
             }
